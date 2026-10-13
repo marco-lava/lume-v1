@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, ArrowRight, Menu, X, Leaf, Check, MapPin, Clock } from "lucide-react";
+import { ArrowUpRight, ArrowRight, Menu, X, Check, MapPin, Clock } from "lucide-react";
 
 const services = [
   {
@@ -129,7 +129,7 @@ export default function Lume() {
             ].map(([href, text]) => (
               <a href={href} key={href} onClick={() => setMenuOpen(false)}>
                 {text}
-                <ArrowUpRight size={20} />
+                {href === "#appuntamento" && <ArrowUpRight size={20} />}
               </a>
             ))}
           </nav>
@@ -141,11 +141,6 @@ export default function Lume() {
               <br />
               RITROVA LA TUA BELLEZZA.
             </p>
-            <span>
-              IL TUO SPAZIO DI CURA,
-              <br />
-              IL TUO TEMPO PER TE.
-            </span>
           </div>
           <h1>
             La bellezza di <i>sentirsi bene.</i>
@@ -158,9 +153,6 @@ export default function Lume() {
       </section>
       <main>
         <section id="filosofia" className="intro section container reveal">
-          <div className="eyebrow">
-            <span>01 / LA NOSTRA FILOSOFIA</span>
-          </div>
           <h2 className="statement">
             Dove la bellezza
             <br />
@@ -196,7 +188,6 @@ export default function Lume() {
                 loading="lazy"
               />
               <Botanical className="collage-leaf" />
-              <span className="photo-caption">UNO SPAZIO DA VIVERE, NON SOLO DA VISITARE.</span>
             </div>
             <div className="philosophy-copy">
               <span className="eyebrow">IL BENESSERE COMINCIA DALL’ASCOLTO</span>
@@ -223,19 +214,19 @@ export default function Lume() {
           </div>
         </section>
         <section className="quote-section reveal">
-          <Botanical />
-          <span className="eyebrow">IL NOSTRO MODO DI INTENDERE LA BELLEZZA</span>
-          <p>
-            Non cambiare chi sei.
-            <br />
-            Prenditi il tempo di <i>ritrovarti.</i>
-          </p>
-          <span className="quote-signature">— La filosofia Lumé</span>
+          <div className="quote-frame">
+            <span className="eyebrow">IL NOSTRO MODO DI INTENDERE LA BELLEZZA</span>
+            <p>
+              Non cambiare chi sei.
+              <br />
+              Prenditi il tempo di <i>ritrovarti.</i>
+            </p>
+            <span className="quote-signature">— La filosofia Lumé</span>
+          </div>
         </section>
         <section className="services-section section container reveal" id="servizi">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">02 / I NOSTRI TRATTAMENTI</span>
               <h2>
                 Piccoli rituali.
                 <br />
@@ -279,7 +270,6 @@ export default function Lume() {
               loading="lazy"
             />
             <div className="experience-copy reveal">
-              <span className="eyebrow">03 / L’ESPERIENZA LUMÉ</span>
               <h2>
                 Lascia parlare
                 <br />
@@ -293,7 +283,6 @@ export default function Lume() {
                 Il tuo rituale viso <ArrowUpRight size={16} />
               </button>
             </div>
-            <span className="panel-label">01 — CURA & LUMINOSITÀ</span>
           </article>
           <article className="experience-panel reverse">
             <img
@@ -302,7 +291,6 @@ export default function Lume() {
               loading="lazy"
             />
             <div className="experience-copy reveal">
-              <span className="eyebrow">UN TEMPO CHE APPARTIENE A TE</span>
               <h2>
                 Spegni il rumore.
                 <br />
@@ -316,11 +304,9 @@ export default function Lume() {
                 Il tuo momento di relax <ArrowUpRight size={16} />
               </button>
             </div>
-            <span className="panel-label">02 — EQUILIBRIO & RELAX</span>
           </article>
         </section>
         <section className="ritual-section container section reveal">
-          <span className="eyebrow">SEMPLICE, COME PRENDERSI CURA DI SÉ</span>
           <h2>
             Il tuo momento, <i>in tre gesti.</i>
           </h2>
@@ -353,7 +339,6 @@ export default function Lume() {
         <section className="booking-section" id="appuntamento">
           <div className="booking-inner container">
             <div className="booking-copy">
-              <span className="eyebrow">04 / UN APPUNTAMENTO CON TE</span>
               <h2>
                 Il resto può aspettare.
                 <br />
@@ -372,7 +357,6 @@ export default function Lume() {
                   <div className="summary-check">
                     <Check size={24} />
                   </div>
-                  <span className="eyebrow">IL TUO RIEPILOGO DIMOSTRATIVO</span>
                   <h3>
                     Un momento per te,
                     <br />
@@ -408,9 +392,8 @@ export default function Lume() {
                       </div>
                     )}
                   </dl>
-                  <p className="summary-disclaimer">
-                    Nessuna richiesta è stata inviata. Questo è soltanto un riepilogo locale; la
-                    disponibilità non è verificata.
+                  <p className="consent">
+                    Questo è un modulo dimostrativo e non verrà inviata alcuna richiesta
                   </p>
                   <button className="button-primary" onClick={() => setSummary(null)}>
                     Modifica il riepilogo <ArrowRight size={18} />
@@ -544,7 +527,7 @@ export default function Lume() {
           </a>
         </div>
         <div className="footer-bottom container">
-          <span>© {new Date().getFullYear()} Lumé</span>
+          <span>© 2026. All rights reserved</span>
           <span>Progetto dimostrativo</span>
         </div>
       </footer>

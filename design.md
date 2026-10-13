@@ -20,3 +20,6 @@ Home in pages/lume.tsx, composta da pages/index.tsx. CSS in styles.css, asset lo
 - FAQ e relativi link rimossi. Nota demo laterale rimossa; disclaimer semplice sopra il pulsante al posto della checkbox.
 - Hero: «Entra nel mondo Lumé» diventa testo non cliccabile, senza freccia.
 - Footer: lume@example.com, «Contatti dimostrativi», copyright solo anno e Lumé, «Progetto dimostrativo» a destra.
+
+## Manifesto — cornice aperta
+Citazione centrata su avorio invariato, senza fogliolina né gradiente. Due angoli sottili oliva: in basso a sinistra e in alto a destra; entrambi con braccio orizzontale lungo e verticale corto, rapporto 3:1. Cornice responsive e ampio spazio tra segni e testo.

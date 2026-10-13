@@ -384,15 +384,36 @@ svg {
   padding: 45px 24px 75px;
   text-align: center;
   position: relative;
-  background: linear-gradient(180deg, var(--cream), #f8f1e6, var(--cream));
+  background: var(--cream);
 }
-.quote-section > svg {
-  width: 42px;
-  height: 50px;
-  display: block;
-  margin: 0 auto 24px;
-  color: #aa9b7e;
-  transform: rotate(-20deg);
+.quote-frame {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 48px;
+}
+.quote-frame::before,
+.quote-frame::after {
+  content: "";
+  position: absolute;
+  width: clamp(96px, 16vw, 210px);
+  aspect-ratio: 3 / 1;
+  border-color: var(--olive);
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+.quote-frame::before {
+  bottom: 0;
+  left: 0;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+}
+.quote-frame::after {
+  top: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
 }
 .quote-section p {
   font-family: Cormorant, serif;
@@ -1013,7 +1034,7 @@ footer {
   }
   .mobile-nav a:last-child {
     border: 0;
-    color: var(--olive);
+    color: inherit;
   }
   .hero-content {
     left: 24px;
@@ -1107,6 +1128,9 @@ footer {
   }
   .quote-section {
     padding: 24px 24px 55px;
+  }
+  .quote-frame {
+    padding: 50px 18px;
   }
   .quote-section p {
     font-size: 36px;
