@@ -1,19 +1,43 @@
-# App template
+# Lumé — La bellezza di sentirsi bene
 
-Runable copies this Bun and Turborepo project into each new sandbox.
+Landing page editoriale per centro estetico, benessere e cura della persona. Realizzata in React, Vite e Tailwind CSS.
 
-The root package commands are the external contract:
+## Caratteristiche
 
-- `bun run dev` starts the web app.
-- `bun run dev:desktop` and `bun run dev:mobile` start platform clients.
-- `bun run build` builds every package.
-- `bun run start` starts or restarts the production server.
-- `bun run stop` stops the production server.
-- `bun run lint` and `bun run typecheck` validate the project.
-- The `db:generate`, `db:migrate`, and `db:push` commands manage the database.
+- Design raffinato, elegante e completamente responsive (desktop, tablet, mobile).
+- Tipografia ricercata con font Cormorant Garamond e Manrope.
+- Navigazione fluida con ancore e menu mobile ottimizzato.
+- Selezione interattiva dei rituali e modulo dimostrativo di richiesta appuntamento.
+- Architettura leggera e performante, basata unicamente su standard web moderni.
 
-Deployment tools depend on these command names. Their implementations may change, but the names must remain stable.
+## Avvio in sviluppo
 
-The web package owns the API, database, and shared web interface. The mobile package is an Expo client. The desktop package is an Electron shell around the web app. Services use the fixed ports defined in `__ports.cjs`, and the web health endpoint is `/api/health`.
+Installa le dipendenze con [Bun](https://bun.sh) (oppure npm/pnpm):
 
-Secrets belong in the root `.env` file. Browser values must use the `VITE_` prefix. Commands prefixed with `internal:` are for template maintenance.
+```bash
+bun install
+```
+
+Avvia il server di sviluppo locale:
+
+```bash
+bun run dev
+```
+
+L'applicazione sarà attiva su [http://localhost:5173](http://localhost:5173).
+
+## Build di produzione
+
+Per compilare i file statici per il rilascio in produzione:
+
+```bash
+bun run build
+```
+
+I file ottimizzati per la distribuzione verranno generati nella cartella `dist/`.
+
+Per visualizzare in anteprima la build di produzione localmente:
+
+```bash
+bun run preview
+```
