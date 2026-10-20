@@ -528,6 +528,23 @@ export default function Lume() {
         </div>
         <div className="footer-bottom container">
           <span>© 2026. All rights reserved</span>
+          <div className="footer-legal-links">
+            <a
+              href="https://www.iubenda.com/privacy-policy/72578097"
+              className="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed"
+              title="Privacy Policy"
+            >
+              Privacy Policy
+            </a>
+            <span className="footer-separator" aria-hidden="true">·</span>
+            <a
+              href="https://www.iubenda.com/privacy-policy/72578097/cookie-policy"
+              className="iubenda-nostyle no-brand iubenda-noiframe iubenda-embed"
+              title="Cookie Policy"
+            >
+              Cookie Policy
+            </a>
+          </div>
           <span>Progetto dimostrativo</span>
         </div>
       </footer>
