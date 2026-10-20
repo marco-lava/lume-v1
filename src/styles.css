@@ -913,12 +913,23 @@ footer {
   color: #c3c9ae60;
   user-select: none;
 }
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .footer-bottom {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: clamp(6px, 1.85vw, 7.5px);
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+  .footer-legal-links {
+    gap: clamp(3px, 1vw, 6px);
     justify-content: center;
     text-align: center;
-    gap: 10px;
   }
 }
 .reveal {
@@ -1349,10 +1360,6 @@ footer {
   .footer-up {
     position: absolute;
     right: 24px;
-  }
-  .footer-bottom {
-    font-size: 7px;
-    gap: 20px;
   }
   .eyebrow {
     font-size: 8px;
