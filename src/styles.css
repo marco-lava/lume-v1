@@ -1030,9 +1030,9 @@ footer {
     padding: 65px 0;
   }
   .hero {
-    height: 760px;
-    min-height: 620px;
-    max-height: 95svh;
+    height: 100svh;
+    min-height: 580px;
+    max-height: none;
   }
   .hero-photo {
     object-position: 61% center;
